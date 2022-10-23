@@ -4,11 +4,24 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine($"Задайте количество столбцов (n)");
 int n = Convert.ToInt32(Console.ReadLine());
 int [,] nums = new int [m, n];
-for(int i =0; i<nums.GetLength(0); i++) {
-    for(int j =0; j<nums.GetLength(1); j++) {
-        nums [i, j] = new Random().Next(1,10);
-        Console.Write($"{nums [i, j]} ");
-    }
-    Console.WriteLine();
+FillArr(nums);
+PrintArr(nums);
 
+void PrintArr(int [,] n) {
+    for(int i =0; i<nums.GetLength(0); i++) {
+        for(int j =0; j<nums.GetLength(1); j++) {
+            Console.Write($"{nums [i, j]} ");
+        }
+        Console.WriteLine();
+    }
+
+}
+
+void FillArr (int [,] n) {
+    for(int i =0; i<nums.GetLength(0); i++) {
+        for(int j =0; j<nums.GetLength(1); j++) {
+            nums [i, j] = new Random().Next(1,10);
+
+        }
+    }
 }
