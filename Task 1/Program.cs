@@ -7,20 +7,20 @@ int [,] nums = new int [m, n];
 FillArr(nums);
 PrintArr(nums);
 
-void PrintArr(int [,] n) {
-    for(int i =0; i<nums.GetLength(0); i++) {
-        for(int j =0; j<nums.GetLength(1); j++) {
-            Console.Write($"{nums [i, j]} ");
+void PrintArr(int [,] num) {
+    for(int i =0; i<num.GetLength(0); i++) {
+        for(int j =0; j<num.GetLength(1); j++) {
+            Console.Write($"{num [i, j]} ");
         }
         Console.WriteLine();
     }
 
 }
 
-void FillArr (int [,] n) {
-    for(int i =0; i<nums.GetLength(0); i++) {
-        for(int j =0; j<nums.GetLength(1); j++) {
-            nums [i, j] = new Random().Next(1,10);
+void FillArr (int [,] num) {
+    for(int i =0; i<num.GetLength(0); i++) {
+        for(int j =0; j<num.GetLength(1); j++) {
+            num [i, j] = new Random().Next(1,10);
 
         }
     }
